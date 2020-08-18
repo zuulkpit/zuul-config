@@ -1,5 +1,5 @@
 - project:
-    name: zuul-config
+    name: projectA
     check:
       jobs:
         - noop
