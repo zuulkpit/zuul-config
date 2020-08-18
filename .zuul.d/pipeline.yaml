@@ -17,7 +17,6 @@
     start:
       github:
         status: 'pending'
-        status-url: "https://zuul.zuul-ci.org/zuul/status.html"
         comment: false
     success:
       github:
@@ -69,7 +68,6 @@
     start:
       github:
         status: 'pending'
-        status-url: "https://zuul.zuul-ci.org/zuul/status.html"
         comment: false
     success:
       github:
@@ -87,7 +85,8 @@
 - pipeline:
     name: post
     post-review: true
-    description: This pipeline runs jobs that operate after each change is merged.
+    description: |
+      This pipeline runs jobs that operate after each change is merged.
     manager: independent
     precedence: low
     trigger:
@@ -106,7 +105,8 @@
 
 - pipeline:
     name: tag
-    description: This pipeline runs jobs in response to any tag event.
+    description: |
+      This pipeline runs jobs in response to any tag event.
     manager: independent
     precedence: high
     post-review: True
